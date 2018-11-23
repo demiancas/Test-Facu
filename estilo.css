@@ -1,0 +1,49 @@
+<!-- Documento CSS-->
+form {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  border: solid 1px #c2c2c2;
+  padding-bottom: 10px;
+  margin: auto;
+  background: #fafafa;
+}
+input[type=text] {
+    width: 75%;
+    padding: 8px 10px;
+    font-size: 16px;
+    margin: 8px 0;
+    border: 1px solid silver;
+    border-radius: 25px;
+    text-align: center;
+    color: #333;
+    background: #ccc;
+}
+input[type=text2] {
+    width: 50%;
+    padding: 5px 5px;
+    font-size: 12px;
+    margin: 8px 0;
+    border: 1px solid silver;
+    border-radius: 20px;
+    text-align: center;
+    color: #333;
+    background: #eee;
+}
+button[type=button], button[type=submit], button[type=reset] {
+    background-color: #02C0E1;
+    border: none;
+	border-radius: 100px;
+    color: white;
+    padding: 15px 20px;
+    font-size: 20px;
+    min-width: 21%;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+button[type=button]:hover, button[type=submit]:hover, button[type=reset]:hover {
+	text-align: center;
+  background-color: #333;
+}
+<!-- Finaliza codigo calculadora CSS-->

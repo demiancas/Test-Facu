@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<style>
+body {font-family: Lato;}
+
+
+#MPV2,#Paris2,#London2{
+    background-color: white;
+    border: 1.5px solid #ccc;
+	border-radius: 15px;
+    color: black;
+    padding: 5px 6px;
+    font-size: 12px;
+    min-width: 10%;
+    margin: 2px 1px;
+    cursor: pointer;
+    font: normal 700 12px/1 "Lato", sans-serif;
+}
+
+#MPV2.active,#Paris2.active,#London2.active{
+  background-color: #FFF000;
+  border: 1.5px solid #FFFFFF;
+  animation: fadeEffect 1.5s;
+}
+
+#MPV2:hover,#Paris2:hover,#London2:hover{
+  background-color: #ccc;
+  border: 1.5px solid #000000;
+  animation: fadeEffect 1.5s;
+}
+
+
+.tabcontent button{
+    background-color: #009ee3;
+    border: 1px solid #ccc;
+	border-radius: 7px;
+    color: white;
+    font-size: 12px;
+    padding: 7px 8px;
+    margin: 1px 4px;
+    text-decoration: none;
+    width: 150px;
+    cursor: pointer;
+    height: 35px;
+    font: normal 700 12px/1 "Lato", sans-serif;
+}
+
+
+button:hover{
+	text-align: center;
+  background-color: #2d3277;
+  border: 1px solid #000000;
+  animation: fadeEffect 1.5s;
+}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 12px;
+    transition: 1s;
+    font-size: 15px;
+    color: black;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: yellow;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.tabcontent {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+body{width:650px; margin: 0 auto; font-family: Lato;}
+</style>
+</head>
+<body>
+
+<!--                    ACA EMPIEZA EL CODIGO PARA MODIFICAR                              -->
+<!--                    ACA EMPIEZA EL CODIGO PARA MODIFICAR                              -->
+<!--                    ACA EMPIEZA EL CODIGO PARA MODIFICAR                              -->
+
+
+<!--                    PESTAÑAS                              -->
+<center><b>CX Instant Access</b></center>
+<div class="tab" align="center">
+  <button class="tablinks" id="MPV2">MPV<br><img src="mp.png" width="35" height="35"></button>
+  <button class="tablinks"><strong id="copyClip" data-clipboard-text=""></strong></button>
+</div>
+</center>
+<!--                    FIN PESTAÑAS                              -->
+
+
+
+
+
+<!--                     MP Vendedor                             -->
+<div id="MPV" class="tabcontent">
+<table style="height: 139px; width: 499px; margin-left: auto; margin-right: auto;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+
+<tr style="height: 70px;">
+
+<td style="width: 131px; text-align: center; height: 70px;">
+<img src="herramientas.png" width="60" height="60"/>
+</td>
+
+<td style="width: 57px; text-align: center; height: 70px;">
+<a href ="https://drive.google.com/drive/folders/1gnswyK1hIaMlhm-09lVfqwFlUjRcfYn2" target="_blank" title="Carpeta Drive Flujos"><img src="flujo.png" width="60" height="60"/></a>
+</td>
+
+<td style="width: 48px; text-align: center; height: 70px;">
+<img src="links.png" width="60" height="60"/>
+</td>
+
+<td style="width: 49px; text-align: center; height: 70px;">
+<a href="https://docs.google.com/spreadsheets/d/1TrvA0CQlQI4cEiQNSCEYBa5UI1hYdfdW5eZ_oWP3CAU/edit?ts=5b0c38e0#gid=936276090" target="_blank"><img src="api.png" width="60" height="60"/></a>
+</td>
+
+</tr>
+
+
+<tr style="height: 25px;">
+
+<td style="width: 131px; text-align: center; height: 25px;">
+  <a id="calculador" href="https://docs.google.com/spreadsheets/d/17W01p_CSZptreTvB3RAASkNS5ZGBXkqgGwTrYn1JIaI/edit#gid=315601154" target="_blank" rel="noopener" title="OPL Plazos de Retiro "><button id="London3">OPL - Plazos de Retiro</button></a>
+</td>
+
+<td style="width: 57px; text-align: center; height: 21px;">
+  <a href="https://docs.google.com/presentation/d/1a4bOUg6L5sqWU-R8Wb0kSSkAy9gyVftbZSO20qKr0c8/edit#slide=id.p3" target="_blank" rel="noopener"><button id="London3">Chargeback Vendedor</button></a>
+</td>
+
+<td style="width: 48px; text-align: center; height: 25px;">
+  <a href="https://drive.google.com/file/d/0Bwzo7pM0tsgSQXNwUnpybWo5b3I3b0FzdWxXS3Zmc0NDRWtZ/view?usp=sharing" target="_blank" rel="noopener" title="PDF para adjuntar a user, pasos/solus frencuentes de Point Bluetooth"><button id="London3">POINT Bluetooth<br>Pasos</button></a>
+</td>
+
+<td style="width: 49px; text-align: center; height: 25px;">
+  <a href="https://api.mercadolibre.com/point/services/caps/USERID " target="_blank" rel="noopener" title="Nos brinda el limite del user que tiene para cobrar con Point."><button id="London3">POINT<BR>Limite del user</button></a>
+</td>
+
+</tr>
+
+<tr style="height: 21px;">
+<td style="width: 131px; text-align: center; height: 21px;">
+  <a href="http://zeus.ml.com/withdrawals" target="_blank" rel="noopener"><button id="London3">Zeus > Withdrawals</button></a>
+</td>
+<td style="width: 57px; text-align: center; height: 25px;">
+  <a href="https://docs.google.com/presentation/d/1T9MUJVt3L9uYhje3D_AIdIVknEqW1A7OsNKSXX-PDB0/edit#slide=id.p1" target="_blank" rel="noopener" title="Flujo Cobros"><button id="London3">Cobros</button></a>
+</td>
+<td style="width: 48px; text-align: center; height: 21px;">
+  <a href="https://drive.google.com/file/d/0Bwzo7pM0tsgSaUFZSnlJVWNCTFk2YjFwMkQ3UnQzaUx0UnZZ/view?usp=sharing" target="_blank" rel="noopener" title="PDF de pasos + dispositivos compatible con Point para adjuntar a user."><button id="London3">POINT Chipper/Jack<br>Pasos + Compatibles</button></a>
+</td>
+<td style="width: 49px; text-align: center; height: 21px;">
+  <a href="https://api.mercadolibre.com/point/services/poi/BBPOS-XXXXXXXXXXXXXX" target="_blank" rel="noopener" title="Obtenemos el user id del titular actual del Point y podemos ver si tiene permitido hacer el cambio o no. 
+- Enabled: puede hacer cambio de titularidad
+- Disabled: no puede hacer cambio de titularidad (tiene que esperar 60 dias desde el ultimo cambio)"><button id="London3">POINT<BR>Titularidad</button></a>
+</td>
+</tr>
+
+<tr style="height: 36px;">
+<td style="width: 131px; text-align: center; height: 36px;">
+  <a href="https://docs.google.com/spreadsheets/d/1qcmJ6IiQRW7FHRzQgLAUO_ij8VudlSrLBPQjgWXTAtI/edit#gid=98796130" target="_blank" rel="noopener"><button id="London3">Percepciones<br>Retenciones</button></a>
+</td>
+<td style="width: 57px; text-align: center; height: 36px;">
+  <a href="https://docs.google.com/presentation/d/1XiehBdISInKMRowfocR4CeZ6T3nwbUdd5NxYJCwLAo4/edit#slide=id.p3" target="_blank" rel="noopener"><button id="London3">Merchant Credits</button></a>
+</td>
+<td style="width: 48px; text-align: center; height: 36px;">
+  <a href="https://docs.google.com/spreadsheets/d/1_K88_lpgSptwPsE9aZtpL4GhHVy2lQrUdR_b0ns1e9g/edit#gid=447624937" target="_blank" rel="noopener" title=""><button id="London3">Templates<br>Derivaciones</button></a>
+</td>
+<td style="width: 49px; text-align: center; height: 36px;">
+  <a href="https://api.mercadolibre.com/mercadopago_account/movements/search?reference_id=XXNRO_PAGOXX&user_id=XXXXX&access_token=XXXXX" target="_blank" rel="noopener" title="Podemos ver la fecha exacta en la que un cobro se libero en la cuenta del usuario. Tambien podemos cuanto y cuando se retuvo dinero por un cobro."><button id="London3">Disponibilidad de una operacion/cobro</button></a>
+</td>
+</tr>
+
+<tr style="height: 36px;">
+<td style="width: 131px; text-align: center; height: 36px;"><a href="https://biembed.adminml.com/cards" target="_blank" rel="noopener" title="Herramienta que utilizamos para ver tracking, estado de envio, monto consumido total, etc."><button id="London3">Herramienta Tarjeta Prepaga (Tableau)</button></a></td>
+<td style="width: 57px; text-align: center; height: 36px;"><a href="https://docs.google.com/presentation/d/1Zb7olVIQ7JZYXFvgCbzD9cae8G9NDoA_ghww_6f4G_A/edit#slide=id.p3" target="_blank" rel="noopener"><button id="London3">Point</button></a></td>
+<td style="width: 48px; text-align: center; height: 36px;"><a href="https://docs.google.com/spreadsheets/d/1aqeuHXh7GKvY9doU3IernYy9tLStdDEivys8I_JqZK4/edit#gid=1506140205" target="_blank" rel="noopener" title="Calendarios Oficiales centralizados en un Gdoc"><button id="London3">Feriados 2018/17</button></a></td>
+<td style="width: 49px; text-align: center; height: 36px;"><a href="https://api.mercadolibre.com/mercadopago_account/movements/search?user_id=XXXXX&status=unavailable&access_token=XXXXX" target="_blank" rel="noopener"><button id="London3">Movimientos no disponibles</button></a></td>
+</tr>
+<tr style="height: 21px;">
+<td style="width: 131px; text-align: center; height: 21px;"><a href="https://www.aftership.com/es/couriers/oca-ar" target="_blank" rel="noopener" title="Tracking de oca"><button id="London3">Tracking<br>OCA</button></a></td>
+<td style="width: 57px; text-align: center; height: 21px;"><a href="https://docs.google.com/presentation/d/1MLep-SX1dXPWEeiNVp_3HAw2W3Pdr8R9UlCRqVCMIOk/edit#slide=id.p1" target="_blank" rel="noopener"><button id="London3">Retiros</button></a></td>
+<td style="width: 48px; text-align: center; height: 21px;"><a href="https://sites.google.com/a/mercadolibre.com/portalcx/mercado-pago/mercado-pago-vendedor" target="_blank" rel="noopener" title=""><button id="London3">Portal CX<br>MP Vendedor</button></a></td>
+<td style="width: 49px; text-align: center; height: 21px;"><a href="https://api.mercadolibre.com/users/XXXXX/mercadopago_account/balance?access_token=XXXXX" target="_blank" rel="noopener"><button id="London3">Balance</button></a></td>
+</tr>
+<tr style="height: 36px;">
+<td style="width: 131px; text-align: center; height: 36px;"><a href="https://www.correoargentino.com.ar/formularios/mercadolibre" target="_blank" rel="noopener" title=""><button id="London3">Tracking<br>Correo Argentino</button></a></td>
+<td style="width: 57px; text-align: center; height: 36px;"><a href="https://docs.google.com/presentation/d/11YwQYa49q6pz5Jy6hllOL3PnSiGKwC2yKvkgzSdoq-U/edit#slide=id.p3" target="_blank" rel="noopener"><button id="London3">Tarjeta Prepaga</button></a></td>
+<td style="width: 48px; text-align: center; height: 36px;"><a href="https://docs.google.com/spreadsheets/d/1Nk9AXGmI4bcwsfb-gta6-9Llt7J7NSPfaT7oIWAR1yM/edit?ts=5b7d7ead#gid=0" title="
+01 - 	Respuesta incorrecta
+02 -	Corresponde a otra cola
+03 -	Devolucion sin comentario
+04 -	Respuesta incompleta
+05 -	Caso pendiente de accion de otro equipo
+06 -	Nos solicitan informacion ya compartida
+" target="_blank" rel="noopener"><button id="London3">Codigos p/ marcar<br>derivaciones erroneas</button></a></td>
+<td style="width: 49px; text-align: center; height: 36px;">
+  <a href="https://api.mercadolibre.com/preapproval/search?payer_id=235987509&access_token=XXXXX" target="_blank" rel="noopener" title="Podemos ver el detalle de las suscripciones de un usuario ingresando su user id y access token. Vemos el estado de la suscripcion y la fecha de ultima modificacion."><button id="London3">Suscripciones</button></a>
+</td>
+</tr>
+
+<tr style="height: 36px;">
+<td style="width: 131px; text-align: center; height: 36px;"><a href="http://www.afip.gov.ar/mercurio/consultapadron/buscarcontribuyente.aspx" target="_blank" rel="noopener" title="Busca personas en AFIP (base oficial donde obtiene los datos MELI)"><button id="London3">AFIP<br>Buscar Personas</button></a></td>
+<td style="width: 57px; text-align: center; height: 36px;"><a href="https://docs.google.com/presentation/d/1VcdgEBGtyndL8BslcEO7LCOPHiLfkavD5_c0dbOPK6s/edit" target="_blank" rel="noopener"><button id="London3">MED Funcionalidades</button></a></td>
+<td style="width: 131px; text-align: center; height: 36px;"></td>
+<td style="width: 57px; text-align: center; height: 36px;"><a href="https://api.mercadolibre.com/users/XXXXXXXXX/accepted_payment_methods/visa?marketplace=NONE" target="_blank" rel="noopener"><button id="London3">Medio VISA<br> ON / OFF</button></a></td>
+</tr>
+
+</tbody>
+</table>
+<center><a title="Especificar tipo de consulta en forma de titulo
+a) Devolucion: user nos devuelve el dispositivo por cualquier motivo, pero no quiere que le enviemos uno.
+b) Reparo: user tiene dispositivo roto/defectuoso y desea recibir uno que funcione. 
+c) Recall: tiene un dispositivo viejo (redondo) y quiere uno nuevo (cuadrado)." href="https://docs.google.com/spreadsheets/d/1_K88_lpgSptwPsE9aZtpL4GhHVy2lQrUdR_b0ns1e9g/edit?ts=59a574a6#gid=447624937" taget="_blank"><img src="plantilla.png" width="60" height="60" /></a><strong id="copyClip" data-clipboard-text=""></strong></center>
+<table style="height: 14px; margin-left: auto; margin-right: auto;" width="493" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td style="width: 116px;"><button title="                 DEVOLUCION
+
+Hola chicos el user quiere realizar la devolucion del Point se encuentra dentro del plazo: 
+
+-------
+Payment ID compra del Point*:
+--
+Direccion actualizada del user (calle, numero, codigo postal y localidad)*:
+Calle:
+Numero:
+Codigo Postal:
+Localidad:
+-------
+
+" id="copyClip" type="button" data-clipboard-text="                 DEVOLUCION
+
+Hola chicos el user quiere realizar la devolucion del Point se encuentra dentro del plazo: 
+
+-------
+Payment ID compra del Point*:
+--
+Direccion actualizada del user (calle, numero, codigo postal y localidad)*:
+Calle:
+Numero:
+Codigo Postal:
+Localidad:
+-------
+">POINT<br><font size="1" color="black">DEVOLUCION</font></button></td>
+<td style="width: 116px;"><button title="RETIRO DEMORADO
+
+  Hola chicos, el user tiene el retiro XXXXXX demorado, se encuentra fuera de plazo segun OPL lo pueden verificar? Gracias" id="copyClip" type="button" data-clipboard-text="RETIRO DEMORADO
+
+  Hola chicos, el user tiene el retiro XXXXXX demorado, se encuentra fuera de plazo segun OPL lo pueden verificar? Gracias">RETIRO<br><font size="1" color="black">DEMORADO</font></button></td>
+<td style="width: 116px;"><button title="                     SOLICITUD DE RECOMPENSA
+
+-------------------------------------------------------------
+- Nombre de usuario (APODO):
+---------------------
+- Cust id (USER ID): 
+---------------------
+- Motivo de la recompensa: 
+---------------------
+- Caso en el que fue asociado a bug:
+---------------------
+- Nombre del bug:
+---------------------
+- Valor a acreditar: 
+---------------------
+- Número de la operación (Payment id): 
+---------------------
+- Centro desde el que solicita la recompensa: Argentina
+-------------------------------------------------------------
+
+" id="copyClip" type="button" data-clipboard-text="                     SOLICITUD DE RECOMPENSA
+
+-------------------------------------------------------------
+- Nombre de usuario (APODO):
+---------------------
+- Cust id (USER ID): 
+---------------------
+- Motivo de la recompensa: 
+---------------------
+- Caso en el que fue asociado a bug:
+---------------------
+- Nombre del bug:
+---------------------
+- Valor a acreditar: 
+---------------------
+- Número de la operación (Payment id): 
+---------------------
+- Centro desde el que solicita la recompensa: Argentina
+-------------------------------------------------------------
+
+">RECOMPENSA - CAP<br><font size="1" color="black" strong>BUG</font></button></td>
+<td style="width: 116px;"><button title="TARJETA PREPAGA DESCONOCIMIENTO DE CARGO
+
+- Motivo: El usuario desconoce un pago con su tarjeta prepaga.
+- Payment id:
+- Fecha:
+" id="copyClip" type="button" data-clipboard-text="             TARJETA PREPAGA DESCONOCIMIENTO DE CARGO
+
+- Motivo: El usuario desconoce un pago con su tarjeta prepaga.
+
+- Payment id:
+
+- Fecha:
+
+">TARJETA PREPAGA<br><font size="1" color="black">DESCONOCIMIENTO</font></button></td>
+<tr>
+<td style="width: 116px;"><button title="                 REPARO
+
+Hola chicos, el usuario solicita reparo del point ya que no le funciona.
+
+-------
+Payment ID compra del Point*:
+--
+Serial number del dispositivo defectuoso*:
+--
+Direccion actualizada del user (calle, numero, codigo postal y localidad)*:
+Calle:
+Numero:
+Codigo Postal:
+Localidad:
+--
+Problema que presenta el Point*:
+-------
+" id="copyClip" type="button" data-clipboard-text="                 REPARO
+
+Hola chicos, el usuario solicita reparo del point ya que no le funciona.
+
+-------
+Payment ID compra del Point*:
+--
+Serial number del dispositivo defectuoso*:
+--
+Direccion actualizada del user (calle, numero, codigo postal y localidad)*:
+Calle:
+Numero:
+Codigo Postal:
+Localidad:
+--
+Problema que presenta el Point*:
+-------
+">POINT<BR><font size="1" color="black">REPARO</font></button></td>
+
+<td style="width: 116px;"><button title="RETIRO ACREDITADO FUERA DE PLAZO DE RETORNO (User no lo ve)
+
+	Hola chicos, el user tiene el retiro XXXXXX acreditado, se encuentra fuera de plazo de retorno y no se encuentra en su cuenta bancaria, nos envia movimientos lo pueden verificar?
+
+Movimientos: LINK" id="copyClip" type="button" data-clipboard-text="RETIRO ACREDITADO FUERA DE PLAZO DE RETORNO (User no lo ve)
+
+	Hola chicos, el user tiene el retiro XXXXXX acreditado, se encuentra fuera de plazo de retorno y no se encuentra en su cuenta bancaria, nos envia movimientos lo pueden verificar?
+
+Movimientos: LINK">RETIRO <font size="1">(user no lo ve)</font><br><font size="1" color="black">ACREDITADO</font></button></td>
+
+<td style="width: 116px;"><button title="                     SOLICITUD DE RECOMPENSA
+
+-------------------------------------------------------------
+- Nombre de usuario (APODO):
+---------------------
+- Cust id (USER ID): 
+---------------------
+- Motivo de la recompensa: 
+---------------------
+- Valor exacto a acreditar: 
+---------------------
+- Indicar dónde se identifica el riesgo de marca: 
+---------------------
+- Número de la operación (Payment id): 
+---------------------
+- Centro desde el que solicita la recompensa: Argentina
+-------------------------------------------------------------
+
+" id="copyClip" type="button" data-clipboard-text="                     SOLICITUD DE RECOMPENSA
+
+-------------------------------------------------------------
+- Nombre de usuario (APODO):
+---------------------
+- Cust id (USER ID): 
+---------------------
+- Motivo de la recompensa: 
+---------------------
+- Valor exacto a acreditar: 
+---------------------
+- Indicar dónde se identifica el riesgo de marca: 
+---------------------
+- Número de la operación (Payment id): 
+---------------------
+- Centro desde el que solicita la recompensa: Argentina
+-------------------------------------------------------------
+
+">RECOMPENSA - CAP<br><font size="1" color="black">RIESGO DE IMAGEN MELI</font></button></td>
+
+<td style="width: 116px;"><button title="TARJETA PREPAGA PAGO DUPLICADO
+
+- Motivo: El usuario realiza un pago pero se le descuenta dos veces de su cuenta de MP.
+
+- Payment id duplicado:
+
+- Fecha duplicado:
+
+" id="copyClip" type="button" data-clipboard-text="             TARJETA PREPAGA PAGO DUPLICADO
+
+- Motivo: El usuario realiza un pago pero se le descuenta dos veces de su cuenta de MP.
+
+- Payment id duplicado:
+
+- Fecha duplicado:
+
+">TARJETA PREPAGA<br><font size="1" color="black">DUPLICADO</font></button></td>
+</tr>
+<tr>
+<td style="width: 116px;"></td>
+
+<td style="width: 116px;"><button title="RETIRO RECHAZADO MOTIVO INTERNO
+
+  Hola chicos, el user tiene el retiro XXXXXX rechazado 'by_admin', nos pueden brindar el motivo para indicarselo al usuario? Gracias.
+
+Movimientos: LINK" id="copyClip" type="button" data-clipboard-text="RETIRO RECHAZADO MOTIVO INTERNO
+
+  Hola chicos, el user tiene el retiro XXXXXX rechazado 'by_admin', nos pueden brindar el motivo para indicarselo al usuario? Gracias.
+">RETIRO <font size="1">(by_admin)</font><br><font size="1" color="black">RECHAZADO</font></button></td>
+
+<td style="width: 116px;"><button title="                     SOLICITUD DE RECOMPENSA
+
+-------------------------------------------------------------
+- Nombre de usuario (APODO):
+---------------------
+- Cust id (USER ID): 
+---------------------
+- Motivo de la recompensa: 
+---------------------
+- Valor exacto a acreditar: 
+---------------------
+- Equipo que comete el error y Número de caso: 
+---------------------
+- Número de la operación (Payment id): 
+---------------------
+- Centro desde el que solicita la recompensa: Argentina
+-------------------------------------------------------------
+
+" id="copyClip" type="button" data-clipboard-text="                     SOLICITUD DE RECOMPENSA
+
+-------------------------------------------------------------
+- Nombre de usuario (APODO):
+---------------------
+- Cust id (USER ID): 
+---------------------
+- Motivo de la recompensa: 
+---------------------
+- Valor exacto a acreditar: 
+---------------------
+- Equipo que comete el error y Número de caso: 
+---------------------
+- Número de la operación (Payment id): 
+---------------------
+- Centro desde el que solicita la recompensa: Argentina
+-------------------------------------------------------------
+
+">RECOMPENSA - CAP<br><font size="1" color="black">ERROR OPERACIONAL</font></button></td>
+
+<td style="width: 116px;"><button title="TARJETA PREPAGA PAGO RECHAZADO SE COBRA
+
+- Motivo: Al usuario se le rechaza el pago pero sin embargo se le hace el descuento de su dinero en MP.
+
+- Payment id:
+
+- Fecha:
+
+" id="copyClip" type="button" data-clipboard-text="             TARJETA PREPAGA PAGO RECHAZADO SE COBRA
+
+- Motivo: Al usuario se le rechaza el pago pero sin embargo se le hace el descuento de su dinero en MP.
+
+- Payment id:
+
+- Fecha:
+
+">TARJETA PREPAGA<br><font size="1" color="black">RECHAZADO</font></button></td>
+
+</tr>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+<hr />
+<h3 style="text-align: center;"><span style="font-family: arial, sans-serif;"><img src="info.png" width="30" height="30" /></span><br /><a href="https://sites.google.com/a/mercadolibre.com/portalcx/home/organigrama-y-referentes#TOC-MP-Vendedor" target="_blank" rel="noopener"><button id="London3">Organigrama y Referentes</button></a><br /><br /><a href="http://www.mercadopago.com" target="_blank" rel="noopener"><img src="version-horizontal-small.png" /></a></h3>
+
+</div>
+<!--                   FIN MP Vendedor                              -->
+
+
+<script src="clipboard.min.js"></script>
+<script src="popup.js">
+</script>
+     
+</body>
+</html>
